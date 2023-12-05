@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
 header {
@@ -39,9 +40,126 @@ nav a:hover {
     text-decoration: none;
 }
 p {
-    font-size: 16px; 
+    font-size: 20px; 
     line-height: 1.6; 
-    color: #333; 
+    color:whitesmoke; 
     margin-bottom: 15px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Times New Roman', Times, serif;
 }
+footer {
+    background-color: #7a5d5d;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    position: absolute;
+ }
+
+ #ImgContainer {
+    background-image: url(https://i.postimg.cc/Y9sjydnh/mercedes-c-class.webp);
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    overflow: hidden;
+    bottom:0%;
+    margin-left: 50%;
+    margin-bottom: 30%;
+   
+ }
+ h1 {
+    color: #815151;
+    font-weight: bold; 
+    text-align: center;
+    margin-bottom: 20px; 
+    position: relative;
+    animation: colorChange 4s infinite alternate; 
+   font-size: 70px;
+}
+
+/* Animation for the heading */
+@keyframes colorChange {
+    0% {
+        color: #553b3b; 
+    }
+    50% {
+        color: #1a321a; 
+    }
+    100% {
+        color: #121279; 
+    }
+   
+   
+}
+
+h2{
+    color: aliceblue;
+    margin-bottom: 10%;
+    text-align: left;
+    font-size: 60px;
+}
+
+
+
+
+.Custom body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20%;
+       
+    
+}
+
+.typing.animate {
+    width: 21ch;
+    border-right: 0.1em solid rgb(252, 19, 19);
+    font-family: monospace;
+    font-size: 5em;
+    animation: type 3.5s , writer 3s infinite alternate,  type2 1s steps(4) 3s forwards, type3 3s steps(22, end) ;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgba(240, 248, 255, 0.595);
+    position:absolute;
+    margin-top: 160px;
+   
+    
+  }
+  
+  .typing.animate::before { 
+    content: "Suit your lifestyle!";
+    animation: type2 1s steps(2) 3s forwards, type3  2s forwards;
+    
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 21ch;
+    }
+  }
+  
+  
+  @keyframes writer {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+ h3{
+    font-size: 60px;
+    color: #815151;
+ }
+
+ #VideoContainer{
+    position: absolute;
+   margin-left: 1200px;
+    margin-top:-600px;
+ }
+  
+ 
+
+
+
+
+ 
