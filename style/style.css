@@ -47,11 +47,12 @@ p {
     font-family:'Times New Roman', Times, serif;
 }
 footer {
-    background-color: #7a5d5d;
+    background-color: #7a5d5d00;
     text-align: center;
     padding: 10px;
     bottom: 0;
     position: absolute;
+    width: 100%;
  }
 
  #ImgContainer {
@@ -156,8 +157,28 @@ h2{
    margin-left: 1200px;
     margin-top:-600px;
  }
-  
  
+
+ #searchInput {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    margin-top: 30px; 
+   
+}
+
+
+
 
 
 
