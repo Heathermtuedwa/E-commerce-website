@@ -17,20 +17,32 @@
     <a href="/html/Contact.html">Contact</a>
 </nav>
 
+<div class="container mt-4">
+  <!-- Search Bar -->
+  <div class="input-group">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+      <div class="input-group-append">
+        <button type="button" class="btn btn-primary">Primary</button>
+          <button class=" btn btn-primary" type="button" id="sortButton">Sort</button>
+      </div>
+  </div>
+</div>
+
+<main>
+  <table>
+
+  </table>
 
 
+</main>
+<footer></footer>
 
 
-<input type="text" id="searchInput" placeholder="Search...">
-<button onclick="searchItems()">Search</button>
-<button onclick="sortItems('Price')">Sort</button>
+<div class="container mt-4" id="productContainer">
+  <!-- Products will be dynamically added here -->
+</div>
 
 
-<!-- <div class="text-center">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div> -->
 
 
 
@@ -41,8 +53,8 @@
 
     
 
-    <script src="/index.js/Product.js"></script>
+    <script src="/Script/Product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
