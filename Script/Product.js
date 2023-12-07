@@ -26,7 +26,7 @@ main.innerHTML = things.map(function (items,index){
 
 
 // sets the text color of a table to white.
-table.style.color= 'white'
+main.style.color= 'white'
 
 //Adds an item from 'things' array to 'savannah' array and updates localStorage.
 function add(index){
