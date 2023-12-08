@@ -10,8 +10,18 @@ main.innerHTML += buy.map( function(items,index) {
             <td>${items.description}</td>
             <td>R${items.price}</td>
             <img src='${items.url}' height="200px" width="200px">
-            <button value ='${index}' data-add class = "btn"></button>
+            <button value ='${index}' data-add class = "btn">Remove</button>
         </tr>
     </table>
     `
 }).join('')
+
+function removeItem(index) {
+    items.splice(index, 1); // Remove the item from the array
+    itemTable.deleteRow(index + 1); // Remove the corresponding row in the table
+  }
+
+
+function purchased() {
+    alert("purchased successfully!");
+  }
