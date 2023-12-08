@@ -246,10 +246,9 @@ button{
 
 .card {
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
-    width: 230px;
+    width: 400px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding: 32px;
     overflow: hidden;
@@ -260,9 +259,6 @@ button{
   }
   
   .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
     color: #e8e8e8;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
@@ -275,7 +271,7 @@ button{
   
   .content .para {
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
   }
   
   .content .btn {
@@ -304,4 +300,57 @@ button{
   .content .btn:active {
     box-shadow: none;
   }
-  
+  /* Admin page */
+  .delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+  }
+  #add, #edit {
+    background-color: #4a524a;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+  }
+  #purchaseButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #purchaseButton:hover {
+    background-color: #1d5b84;
+  }
+
+
+  /* checkout page */
+
+  #checkoutTable{
+    border: solid 2px white;
+    padding: 15px;
+  }
+
+  #tdStyle{
+    padding: 65px;
+  }
+  #removeButton{
+    color: white;
+  }
+
+  /* responsive */
+  @media screen and (max-width: 768px) {
+    .toxic2 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .card {
+        width: 100%;
+    }
+}

@@ -1,27 +1,38 @@
 let buy = JSON.parse(localStorage.getItem('savannah'))
 
 let main = document.querySelector('main')
+let table = document.querySelector('#checkoutTable')
 
-main.innerHTML += buy.map( function(items,index) {
+table.innerHTML = buy.map( function(items,index) {
     return `
-    <table>
         <tr>
-            <td>${items.name}</td>
-            <td>${items.description}</td>
-            <td>R${items.price}</td>
-            <img src='${items.url}' height="200px" width="200px">
-            <button value ='${index}' data-add class = "btn">Remove</button>
+            <td id="tdStyle" style = "color: black; background-color: blue; padding-top: 40px">${items.name}</td>
+            <td id="tdStyle" style = "color: black; background-color: grey; padding-top: 40px">${items.description}</td>
+            <td id="tdStyle" style = "color: black; background-color: blue; padding-top: 40px" >R${items.price}</td>
+           <td id="tdStyle" style = "color:  black; background-color: grey; padding-top: 40px" ><img src='${items.url}' height="200px" width="200px"></td> 
+           <td id="tdStyle" style = "color:  black; background-color: blue; padding-top: 40px"><button id="removeButton" value='${index}' data-add class="btn">Remove</button>
         </tr>
-    </table>
     `
 }).join('')
 
-function removeItem(index) {
-    items.splice(index, 1); // Remove the item from the array
-    itemTable.deleteRow(index + 1); // Remove the corresponding row in the table
-  }
+    //"Function triggers purchase actions, it a  button for making purchases."
+    function makePurchase() {
+        
+        //"Confirmation prompt asks user to confirm or cancel a purchase."
+        let confirmPurchase = confirm("Do you want to make a purchase?");
+        
+       //If confirmed, show 'Purchase successful!', otherwise show 'Purchase canceled'. 
+        if (confirmPurchase) {
+          
+          alert("Purchase successful!"); 
+        } else {
+         
+          alert("Purchase canceled.");
+        }
+      }
 
-
-function purchased() {
-    alert("purchased successfully!");
-  }
+      let removeButton = document.getElementById('removeButton');
+      removeButton.addEventListener('click', function() {   
+          favourite(); 
+      });
+  
