@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #444;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+p {
+    font-size: 20px; 
+    line-height: 1.6; 
+    color:whitesmoke; 
+    margin-bottom: 15px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 20px;
+}
+footer {
+    background-color: #7a5d5d00;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+ }
+
+ #ImgContainer {
+    background-image: url(https://i.postimg.cc/Y9sjydnh/mercedes-c-class.webp);
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    overflow: hidden;
+    bottom:0%;
+    margin-left: 50%;
+    margin-bottom: 30%;
+   
+ }
+ h1 {
+    color: #815151;
+    font-weight: bold; 
+    text-align: center;
+    margin-bottom: 20px; 
+    position: relative;
+    animation: colorChange 4s infinite alternate; 
+   font-size: 70px;
+}
+
+/* Animation for the heading */
+@keyframes colorChange {
+    0% {
+        color: #553b3b; 
+    }
+    50% {
+        color: #1a321a; 
+    }
+    100% {
+        color: #121279; 
+    }
+   
+   
+}
+
+h2{
+    color: aliceblue;
+    margin-bottom: 10%;
+    text-align: left;
+    font-size: 60px;
+}
+
+
+
+
+.Custom body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20%;
+       
+    
+}
+
+.typing.animate {
+    width: 21ch;
+    border-right: 0.1em solid rgb(252, 19, 19);
+    font-family: monospace;
+    font-size: 5em;
+    animation: type 3.5s , writer 3s infinite alternate,  type2 1s steps(4) 3s forwards, type3 3s steps(22, end) ;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgba(240, 248, 255, 0.595);
+    position:absolute;
+    margin-top: 160px;
+   
+    
+  }
+  
+  .typing.animate::before { 
+    content: "Suit your lifestyle!";
+    animation: type2 1s steps(2) 3s forwards, type3  2s forwards;
+    
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 21ch;
+    }
+  }
+  
+  
+  @keyframes writer {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* About page */
+
+  h3{
+    font-size: 60px;
+    color: #815151; 
+    margin-left: 20px;
+    text-shadow: 10px 10px 5px red;
+ }
+
+ #VideoContainer{
+    position: absolute;
+   margin-left: 1200px;
+    margin-top:-600px;
+ }
+ 
+ .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-primary {
+    border-color: #3f3f8a;
+    padding: 20px;
+    background-color: rgb(15, 96, 167);
+}
+
+.btn-primary:hover {
+    background-color: #6d767e;
+    border-color: #0a0b0c;
+}
+
+.btn-secondary {
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6f8ea9;
+}
+ 
+.contact-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button{
+    padding: 30px;
+    border-radius: 5px;
+    color: #dccece;
+    background-color: #281339;
+}
+
+/* PRODUCT PAGE  */
+
+.toxic2{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #212121;
+    border: 2px solid #313131;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: #0974f1;
+    border-radius: 5px;
+
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border-color: #0974f1;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+  }
+  
+  /* Checkout page  */
+  /* #table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+  }
+
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  } */
