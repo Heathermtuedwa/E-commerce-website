@@ -1,11 +1,12 @@
 //Declared an empty array
-let savannah = []
+let savannah = typeof JSON.parse(localStorage.getItem('savannah')) === 'object' ? JSON.parse(localStorage.getItem('savannah')): [];
 
 //Selects the main element and takes data from local storage.
 let main = document.querySelector('main')
 let things = JSON.parse(localStorage.getItem('heather'))
 
 //Fills the HTML content of the main element with data from 'things'.
+function smirnoff(){
 main.innerHTML = things.map(function (items,index){
    console.log(items)
    console.log(index);
@@ -22,7 +23,10 @@ main.innerHTML = things.map(function (items,index){
    
 `
 //Converts an array into a string by joining its elements with an empty string.
-}).join('')
+})}
+
+smirnoff()
+
 
 
 // sets the text color of a table to white.
@@ -42,3 +46,30 @@ function add(index){
    }
 
 })
+document.getElementById('searchInput').addEventListener('input', searchFunction);
+function searchFunction() {
+    let searchIt = document.getElementById('searchInput').value.toLowerCase();
+    let sortedProducts = items.filter(item => {
+        return item.name.toLowerCase().includes(searchIt);
+    })
+    smirnoff(sortedProducts);
+}
+
+function sorts(){
+    // let sorting = [...things];
+    things.sort((a,b) => a.price - b.price);
+    // display the sorted products.
+    smirnoff()
+}
+
+let sortBtn = document.getElementById('sortBtn');
+
+sortBtn.addEventListener('click', function(){
+    sorts();
+});
+
+
+
+
+
+

@@ -44,8 +44,8 @@ function toxic(){
         <td>R ${items.price}</td>
         <td>${items.description}</td>
         <td><img src='${items.url}' height = "100px" width = "150px"></td>
-        <td><button>ADD</button></td>
-        <td><button > Edit </button></td>
+        <td><button id = 'add'>Add</button></td>
+        <td><button id = 'edit'>Edit</button></td>
         <td><button class = 'delete' value = '${index}'>Del</button></td>
         </tbody>
         </tr>
@@ -66,30 +66,103 @@ table.style.fontSize = '20px'
 toxic()
 //Saves and takes product data in local storage using JSON.
 function favourite(){
-    localStorage.setItem('product',JSON.stringify(product))
-    product = JSON.parse(localStorage.getItem('product'))
+    localStorage.setItem('heather',JSON.stringify(heather))
+    product = JSON.parse(localStorage.getItem('heather'))
 }
 
 
 // deletefunction
 function remove(position){
-    heather.splice(position,1)
-    favourite()
-    toxic()
+    heather.splice(position,1);
+    favourite();
+    toxic();
 }
 //Listens for clicks on the table; if delete button clicked, triggers the remove function.
 table.addEventListener('click', function(event){
     if(event.target.classList.contains('delete')){
-        remove(event.target.value)
+        remove(event.target.value);
         // alert(event.target.value)
     }
 })
 //Selects the first element with the class "delete" and assigns it to deletebutton.
-let deletebutton = document.querySelector('.delete')
+let deletebutton = document.getElementById('Del')
+
+
+
+   
 //Adds Bootstrap classes to the table for styling, then calls the toxic function to display the data.
 table.classList.add('table','table-hover', 'table-striped', 'table-bordered')
 toxic();
 
+// function addItem(){
+//     document.querySelector().innerHTML 
+//     `
+// <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+//   Launch demo modal
+// </button>
+// <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//   <div class="modal-dialog">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+//         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+//       </div>
+//       <div class="modal-body">
+//         ...
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Save changes</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+    
+//     `
+// }
 
 
- 
+
+
+//created a function called Addproduct
+function Addproduct(){
+    //These lines retrieve the values entered in HTML input elements with the IDs 'firstBar' and 'secondBar'. 
+    let name = document.getElementById('firstBar').value
+    let description = document.getElementById('secondBar').value
+    let price = document.getElementById('thirdBar').value
+    let url = document.getElementById('fourthBar').value
+    //It passes the product's information as arguments to the constructor.
+    let createNewProduct = new Autoconstructor (name, description, price, url);
+    heather.push(createNewProduct);
+    //converts the updated heather array into a JSON string and stores it in the local storage under the key 'heather'.
+    localStorage.setItem('heather', JSON.stringify(heather));
+}
+
+let save = document.getElementById('saveBtn');
+
+//When 'save' is clicked, this event triggers functions,
+// Addproduct(), toxic(),  favourite() .
+save.addEventListener('click', function(){
+    Addproduct()
+    toxic();
+    favourite();
+})
+
+function showSpinner() {
+    document.getElementById('spinner').style.display = 'block';
+}
+
+// Function to hide the spinner
+function hideSpinner() {
+    document.getElementById('spinner').style.display = 'none';
+}
+function removeAllData() {
+    heather =[];
+    // Shows the spinner before removing data
+    showSpinner();
+
+    // Hides the spinner after data is removed
+    hideSpinner();
+}
+
+document.getElementById('Delete').addEventListener('click', removeAllData);
