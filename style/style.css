@@ -55,13 +55,13 @@ footer {
  }
 
  #ImgContainer {
-    background-image: url(https://i.postimg.cc/Y9sjydnh/mercedes-c-class.webp);
+    background-image: url(https://i.ibb.co/2658bwG/mercedes-c-class.webp);
     background-repeat: no-repeat;
     /* position: absolute; */
     overflow: hidden;
     bottom:0%;
-    margin-left: 50%;
-    margin-bottom: 30%;
+    margin-left: 40%;
+    margin-bottom: 10%;
    
  }
  h1 {
@@ -156,9 +156,12 @@ h2{
  }
 
  #VideoContainer{
-    position: absolute;
-   margin-left: 1200px;
-    margin-top:-600px;
+  position: absolute;
+  margin-left: 1100px;
+  margin-top:-600px;
+  
+    
+    
  }
  
  .container {
